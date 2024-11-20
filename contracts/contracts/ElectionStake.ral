@@ -1,0 +1,58 @@
+Contract ElectionStake(
+    name: ByteVec, // Name of the election
+    // baseRate: U256,
+    platformFeePercent: U256,
+    mut forCandidateA: U256,
+    mut forCandidateB: U256,
+    mut candidateAStaked: U256,
+    mut candidateBStaked: U256,
+    mut isActiveBid: Bool
+) {
+    // error code enum
+    
+   
+    // public function to get name of election 
+    pub fn getName() -> ByteVec {
+        return name
+    }
+
+    @using(updateFields = true)
+    pub fn setStatus(status: Bool) -> () {
+        isActiveBid = status
+    }
+
+    @using(updateFields = true, checkExternalCaller = false )
+    // public function to place a bet
+    pub fn placeBet(candidate: Bool, amount: U256) -> () {
+        // platform fee
+        emit Debug(`before pf fees`)
+        emit Debug(`pf fees ${platformFeePercent}`)
+        let stakeAmt = amount - ((platformFeePercent * amount) / 100)
+        emit Debug(`after pf fees: ${stakeAmt}`)
+
+        if(candidate == true) { // for A
+            forCandidateA = forCandidateA + 1
+            candidateAStaked = candidateAStaked + stakeAmt
+        } else {
+            forCandidateB = forCandidateB + 1
+            candidateBStaked = candidateBStaked + stakeAmt
+        } 
+
+    }
+
+    // public function to get current bets
+    // forCandidateA, candidateAStaked, forCandidateB, candidateBStaked
+    pub fn getCurrentStakes() -> (U256, U256, U256, U256) {
+        return forCandidateA, candidateAStaked, forCandidateB, candidateBStaked
+    }
+
+    // utility functions
+    
+    // get platform fee
+    fn getPlatformFee(amount: U256) -> U256 {
+        // TODO: transferTokenToSelf 
+        let pFee = amount * platformFeePercent
+        return amount - pFee
+    }
+    
+}

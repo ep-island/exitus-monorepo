@@ -1,0 +1,27 @@
+{
+  "fullNodeVersion": "v3.8.5",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false,
+    "ignoreUnusedFunctionReturnWarnings": false,
+    "skipAbstractContractCheck": false
+  },
+  "infos": {
+    "ElectionStake": {
+      "sourceFile": "ElectionStake.ral",
+      "sourceCodeHash": "844e9f3de2b4b9f6fc2005ec729b900edc0de13c44f2b2c82f467ccd8004c580",
+      "bytecodeDebugPatch": "=8-2+7e=2-2+92=38-2+4023=10+7e010e6265666f72652070662066656573ce017e0208706620666565732000=28+16027e020f616674657220706620666565733a2000=108",
+      "codeHashDebug": "eba9c4cbe8a80c7c44993f2def51138c6a014e657d81c90a251b4eccf67b429a"
+    },
+    "PlaceBet": {
+      "sourceFile": "Placebet.ral",
+      "sourceCodeHash": "c2671200bb0009fdbd038ffd2cab6700ae030c90caf72444035016f90c99b1dd",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    }
+  }
+}

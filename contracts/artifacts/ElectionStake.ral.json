@@ -1,0 +1,74 @@
+{
+  "version": "v3.8.5",
+  "name": "ElectionStake",
+  "bytecode": "06030e4049405d010000000103d3f4544ae5ce000201000203001ed317c2f75c1601ce0116012c1340642d2b17021600031c4c09a0000d2aa100a00216022aa1024a08a0010d2aa101a00316022aa103010000000406d3640b8c8ca000a002a001a00302",
+  "codeHash": "4622eaf5346d821ba4c92fe44abe2cb02c30891a169e917176a5e581933887ff",
+  "fieldsSig": {
+    "names": [
+      "name",
+      "platformFeePercent",
+      "forCandidateA",
+      "forCandidateB",
+      "candidateAStaked",
+      "candidateBStaked"
+    ],
+    "types": [
+      "ByteVec",
+      "U256",
+      "U256",
+      "U256",
+      "U256",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "getName",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "ByteVec"
+      ]
+    },
+    {
+      "name": "placeBet",
+      "paramNames": [
+        "candidate",
+        "amount"
+      ],
+      "paramTypes": [
+        "Bool",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": []
+    },
+    {
+      "name": "getCurrentStakes",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256",
+        "U256",
+        "U256",
+        "U256"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": []
+}

@@ -1,0 +1,31 @@
+{
+  "version": "v3.8.5",
+  "name": "PlaceBet",
+  "bytecodeTemplate": "01010300000006{1}{2}0e0c{0}0101",
+  "fieldsSig": {
+    "names": [
+      "electionStake",
+      "candidate",
+      "amount"
+    ],
+    "types": [
+      "ElectionStake",
+      "Bool",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}

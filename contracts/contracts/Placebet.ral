@@ -1,0 +1,3 @@
+TxScript PlaceBet(electionStake: ElectionStake,candidate: Bool, amount: U256) {
+    electionStake.placeBet(candidate, amount)
+}
